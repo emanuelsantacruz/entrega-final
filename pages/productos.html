@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- link  bootstrap y css -->
-    <title>LeParfum ARG</title>
-    <meta name="description" content="Perfumería online con fragancias árabes y de diseñador. Envíos a todo el país. Descubrí tu perfume ideal en LeParfum ARG.">
-    <meta name="keywords" content="perfumes, fragancias, perfumería online, perfumes árabes, LeParfum ARG">
-    <meta name="author" content="LeParfum ARG">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="icon" type="image/png" href="../img/logo.png">
+  <title>LeParfum ARG</title>
+  <meta name="description"
+    content="Perfumería online con fragancias árabes y de diseñador. Envíos a todo el país. Descubrí tu perfume ideal en LeParfum ARG.">
+  <meta name="keywords" content="perfumes, fragancias, perfumería online, perfumes árabes, LeParfum ARG">
+  <meta name="author" content="LeParfum ARG">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/png" href="../img/logo.png">
 </head>
+
 <body>
 
   <header class="text-center">
-     <!-- etiqueta para img -->
-    <img src="../img/logo.png" alt="Logo LeParfum ARG" class="logo-img" style="max-height: 120px;" />
-<!-- etiqueta para menu de navegacion  -->
+    <!-- etiqueta para img -->
+    <img src="../img/logo.png" alt="Logo LeParfum ARG" class="logo-img" />
+
+    <!-- etiqueta para menu de navegacion  -->
     <nav class="mt-4">
       <div class="container">
         <div class="row justify-content-center g-2">
@@ -36,70 +42,44 @@
   </header>
 
 
-<!-- etiqueta para el contenido principal -->
+  <!-- etiqueta para el contenido principal -->
   <main class="container my-5 flex-grow-1">
     <!-- etiqueta para titulo principal -->
     <h1 class="text-center mb-4 border-bottom pb-2">LeParfum ARG</h1>
-    
-<h2 class="mb-3">Productos en stock</h2>
+
+    <h2 class="mb-3">Productos en stock</h2>
+
+    <!-- Mensaje de agregado al carrito -->
+    <div id="mensaje-carrito" class="alert alert-success text-center d-none" role="alert"></div>
 
 
- <div class="row justify-content-center g-2 productos-container">
-  <!-- Producto 1 -->
-    <div class="producto border border-warning">
-        <h3>Lattafa Yara 100ml</h3>
-        <img src="../img/yara.jpg" alt="Lattafa Yara 100ml">
-        <p>$40000</p>
-    </div>
-  <!-- Producto 2 -->
-    <div class="producto border border-warning">
-        <h3>Club de Nuit EDT</h3>
-        <img src="../img/clubdenuit.jpg" alt="Club de Nuit EDT">
-        <p>$40000</p>
-    </div>
-<!-- Producto 3 -->
-    <div class="producto border border-warning">
-        <h3>Animale men EDT</h3>
-        <img src="../img/animale.jpg" alt="Animale men EDT">
-        <p>$40000</p>
-    </div>
-<!-- Producto 4 -->
-    <div class="producto border border-warning">
-        <h3>Honor and Glory</h3>
-        <img src="../img/badeealoud.jpg" alt="Honor and Glory">
-        <p>$40000</p>
-    </div>
-<!-- Producto 5 -->
-    <div class="producto border border-warning">
-        <h3>Emper Stallion</h3>
-        <img src="../img/emperstallion.jpg" alt="Emper Stallion">
-        <p>$40000</p>
-    </div>
-<!-- Producto 6 -->
-    <div class="producto border border-warning">
-        <h3>Versace Eros Flame</h3>
-        <img src="../img/versaceflame.jpg" alt="Versace Eros Flame">
-        <p>$40000</p>
-    </div>
-</div>
+    <!-- Contenedor donde JS pondrá los productos -->
+    <div id="lista-productos" class="row justify-content-center g-2 productos-container">
 
-</main>
+    </div>
 
- <footer class="bg-dark text-white text-center py-3">
+    <hr class="my-5">
+
+    <!-- Sección del Carrito -->
+    <div class="container mb-5">
+      <div id="mi-carrito" class="border p-3 rounded bg-light">
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
     <p class="mb-0">Todos los derechos reservados</p>
   </footer>
 
- 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script>
-    document.querySelectorAll('.producto').forEach(el => {
-      el.addEventListener('click', () => {
-        el.classList.add('animado');
-        setTimeout(() => el.classList.remove('animado'), 600);
-      });
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
- </body>
- </html>
+  <!-- Link a mi archivo JS -->
+  <script src="../js/main.js"></script>
 
+</body>
+
+</html>

@@ -33,9 +33,11 @@ $font-size-small: 0.9rem;
   0% {
     transform: scale(1) rotate(0deg);
   }
+
   50% {
     transform: scale(0.8) rotate(180deg);
   }
+
   100% {
     transform: scale(1) rotate(360deg);
   }
@@ -43,6 +45,7 @@ $font-size-small: 0.9rem;
 
 .icono-hover {
   transition: transform 0.3s ease;
+
   &:hover {
     transform: translateY(-5px);
   }
@@ -50,7 +53,6 @@ $font-size-small: 0.9rem;
 
 body {
   min-height: 100vh;
-  @include flex(column);
 }
 
 header {
@@ -155,46 +157,6 @@ main {
   gap: $gap-general;
   max-width: 500px;
   margin: 0 auto;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .contacto-item {
-    @include flex(row, flex-start, center);
-    gap: 15px;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: translateY(-5px);
-    }
-
-    img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-    }
-
-    .contacto-texto {
-      h4, h5 {
-        margin: 0;
-        font-size: $font-size-base;
-      }
-
-      p {
-        margin: 0;
-        font-size: $font-size-small;
-      }
-    }
-  }
-}
-
-footer {
-  width: 100vw;
-  background-color: #222;
-  color: white;
-  text-align: center;
   padding: 1rem 0;
 
   p {
